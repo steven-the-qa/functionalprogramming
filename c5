@@ -1,0 +1,16 @@
+// the global variable
+var fixedValue = 4;
+
+// Add your code below this line
+function incrementer (value) {
+  return value+1
+  
+  // Add your code above this line
+}
+
+var newValue = incrementer(fixedValue); // Should equal 5
+console.log(fixedValue); // Should print 4
+
+//This is even better because it passes the variable into the function
+//Declaring all dependencies for the functions as arguments is critical to ensuring the code is easily testable
+//This also has the added benefit of making the function more flexible for reuse elsewhere
