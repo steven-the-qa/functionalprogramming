@@ -1,0 +1,23 @@
+// the global variable
+var fixedValue = 4;
+
+function incrementer () {
+  // Add your code below this line
+  return fixedValue+1
+  
+  // Add your code above this line
+}
+
+var newValue = incrementer(); // Should equal 5
+console.log(fixedValue); // Should print 4
+
+/*The previous example didn't have any complicated operations 
+but the splice method changed the original array, and resulted in a bug.
+
+Recall that in functional programming, changing or altering things is called mutation, and the outcome is called a side effect. 
+A function, ideally, should be a pure function, meaning that it does not cause any side effects.
+-freeCodeCamp*/
+
+//This code doesn't change the global variable, 'fixedValue'
+//It uses a function to achieve the same effect without mutating the variable
+//This practice leads to fewer side effects
