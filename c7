@@ -1,0 +1,14 @@
+var rating = [];
+watchList.map((movie) => {
+  rating.push({title: movie.Title, rating: movie.imdbRating});
+})
+
+// Add your code above this line
+
+console.log(rating); 
+
+//The object that the map method iterated through was an object with several nested movie objects, each with several properties
+
+//Instead of using a for loop that could change the original 'watchList' object, we use the map method to generate a new array 
+//The new array is determined by the callback function inside the map method
+//The map method iterates through the entire 'watchList' object and creates a new array using the instructions in the callback function
