@@ -1,0 +1,47 @@
+// the global variable
+var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+/* This function should add a book to the list and return the list */
+// New parameters should come before the bookName one
+
+// Add your code below this line
+function add (a, bookName) {
+  const books = a.slice(0);
+  books.push(bookName);
+  return books
+
+  // Add your code above this line
+}
+
+/* This function should remove a book from the list and return the list */
+// New parameters should come before the bookName one
+
+// Add your code below this line
+function remove (a, bookName) {
+    const books = a.slice(0);
+    return books.slice(0, books.indexOf(bookName)).concat(books.slice(books.indexOf(bookName)+1, books.length));
+
+    // Add your code above this line
+
+}
+
+var newBookList = add(bookList, 'A Brief History of Time');
+var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+
+
+//The object of this challenge was to refactor the original code to make sure the global variable, 'bookList', does not change
+/* At first, this was very difficult for me. Yesterday, I stared at it for a straight hour wondering what I was doing wrong
+because it seemed like it should have been so simple. 
+
+I realized that it was a problem very similar to the other one I had involving slice and splice. If I want to use a copy of the original
+array and NOT change the original array, I must save the copy to a variable. In this challenge, keywords 'let' or 'const' work equally.
+
+I also realized that the challenge was set up in a misleading fashion and that ultimately I needed to change
+all of the functions' code to make it work. That was eye-opening and I'll be aware of that possibility for future challenges. */
+
+//The first function adds a book 'bookName' to the passed 'books' array and returns the new array
+//The second function removes a book 'bookName' from the 'books' array and returns that new array
+/* The second function doesn't actually remove the book from the passed array, 
+it just concatenates the 2 parts of the array surrounding
+the book 'bookName' so that 'bookName' is left out of the resulting array */
