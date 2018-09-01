@@ -1,0 +1,23 @@
+// the global Array
+var s = [23, 65, 98, 5];
+
+Array.prototype.myFilter = function(callback){
+  var newArray = [];
+  // Add your code below this line
+  for (let i = 0; i < this.length; i++){
+  if (callback(this[i])){
+    newArray.push(this[i]);
+  }
+  }
+  // Add your code above this line
+  return newArray;
+
+};
+
+var new_s = s.myFilter(function(item){
+  return item % 2 === 1;
+});
+
+//This is my filter method implementation!
+//Using a for loop, I iterate through the object the method was called on to search for items for which the condition evaluates to true
+//Those items get pushed to the new array and returned
