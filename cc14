@@ -1,0 +1,13 @@
+function nonMutatingPush(original, newItem) {
+  // Add your code below this line
+  return original.concat(newItem);
+  
+  // Add your code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingPush(first, second);
+
+//Concat can be used in the same situation as Push but without the mutating side effects
+//If you '.push()' the 'second' array onto 'first', it'll look like '[1,2,3,[4,5,6]'
+//Using '.concat()', it'd be '[1,2,3,4,5,6]'
