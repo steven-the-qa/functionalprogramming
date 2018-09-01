@@ -1,0 +1,15 @@
+// Add your code below this line
+var nolanMovies = watchList.filter(movie => {
+  return movie.Director === 'Christopher Nolan'
+})
+var averageRating = nolanMovies.reduce((a,b) => {
+  let rating = Number(b.imdbRating);
+  return a + rating
+},0)/nolanMovies.length;
+
+// Add your code above this line
+
+//This function utilizes the '.reduce()' method to average all the IMDB ratings of movies directed by Christopher Nolan
+/* The reduce method is useful because it can compare 2 items against each other to analyze data, 
+whereas filter and map can only do 1 at a time */
+//I probably could have combined the 'nolanMovies' functionality with 'averageRating' to use only the '.reduce()' method for the problem
