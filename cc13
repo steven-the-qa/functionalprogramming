@@ -1,0 +1,11 @@
+function nonMutatingConcat(original, attach) {
+  // Add your code below this line
+  return original.concat(attach)
+  
+  // Add your code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingConcat(first, second);
+
+//A quick and easy use of the 'concat' method to join 2 arrays passed to a function into 1
