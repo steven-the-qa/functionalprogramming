@@ -1,0 +1,12 @@
+function nonMutatingSplice(cities) {
+  // Add your code below this line
+  return cities.slice(0,3);
+  
+  // Add your code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+
+//The 'splice' method mutates arrays, which isn't good when you're trying to follow functional programming principles
+//You can use the 'slice' method to achieve the same results as 'splice' by being a little creative and sometimes using other methods too
+//This is an example of using 'slice' to do the same thing 'splice' would if it were given a first argument of '3'
