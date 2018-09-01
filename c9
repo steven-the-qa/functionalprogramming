@@ -1,0 +1,13 @@
+var filteredList = watchList.filter(movie => {
+  return Number(movie.imdbRating) > 8.0
+}).map(movie => {
+  movie = {title: movie.Title, rating: movie.imdbRating};
+  return movie
+});
+
+// Add your code above this line
+
+console.log(filteredList); 
+
+//I used filter to narrow down the movie objects in 'watchList' to those with the proper IMDB rating
+//Then, from those options, I iterated through with map to reset the movie objects' contents to the 2 properties I wanted in the result
