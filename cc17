@@ -1,0 +1,12 @@
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Add your code below this line
+  return arr.concat([]).sort()
+  
+  // Add your code above this line
+}
+nonMutatingSort(globalArray);
+
+//Using '.sort()' mutates the original array
+//You can avoid this by concatenating an empty array onto the original array before sorting it
+//This doesn't alter the contents of the original array but it makes sure a new array is returned because of how concat works
