@@ -1,0 +1,17 @@
+// the global variable
+var globalTitle = "Winter Is Coming";
+
+// Add your code below this line
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/[ ]+/).join('-')
+  
+}
+// Add your code above this line
+
+var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
+
+//This function takes a title-cased string separated by spaces and returns a lowercase URL slug separated by hyphens
+//First convert to lowercase
+//Second trim the white space off the start and end of the string
+//Third split the string wherever there is at least 1 space character
+//Last join the words back into a string with hyphens
