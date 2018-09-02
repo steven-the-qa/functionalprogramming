@@ -1,0 +1,9 @@
+function splitify(str) {
+  // Add your code below this line
+  return str.split(/\W/)
+  
+  // Add your code above this line
+}
+splitify("Hello World,I-am code");
+
+//Since there were multiple delimiters (spaces, hyphens, periods), I just used a regex shortcut to split the string at non-letters
