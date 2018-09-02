@@ -1,0 +1,12 @@
+function alphabeticalOrder(arr) {
+  // Add your code below this line
+  return arr.sort(function(a,b) {
+    return a > b
+  })
+  
+  // Add your code above this line
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+//The solution is as easy as just using the method like so: 'return arr.sort()' but it's good practice to provide a callback function
+//This makes sure people know how the items are being sorted, and the default method in Javascript is by unicode character value
