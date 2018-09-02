@@ -1,0 +1,15 @@
+function add(x) {
+  // Add your code below this line
+  return function(y) {
+    return function(z) {
+      return x + y + z
+    }
+  }
+  
+  // Add your code above this line
+}
+add(10)(20)(30);
+
+//Currying a function is converting a function with multiple arguments into a series of functions with 1 argument
+//1 function returns the next function and so on
+//This is useful when you don't get all your arguments at the same time but still need them to interact
